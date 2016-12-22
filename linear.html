@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+<title>Linear Regression</title>
+
+<link rel="stylesheet" type="text/css" href="linearReg_style.css">
+
+<script src="reg.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<h1 style = "color: white; text-align: center;"> Linear Regression</h1>
+	<div class = "container">
+
+		<span class = "eqn">
+			Line of Best Fit: y = <input type="text" size = "7" id = "m" value = "N/A" readonly>
+			x + <input type="text" size = "7" id = "b" value = "N/A" readonly>
+			R<sup>2</sup>: <input type="text" size = "7" id = "rsquared" value = "N/A" readonly>
+		</span>
+
+		<canvas id = 'regCanvas' width = "650" height= "650"></canvas>
+
+		<div id = 'plot-container'>
+			<p style="margin: 0"><button class = "button" onclick="plot()">Plot</button>
+			<select id = "plot-select" onchange= "onplotchange()">
+				<option value = "page">Plot from Webpage</option>
+				<option value = "file">Plot from File</option>
+			</select>
+		</div>
+
+
+		<div id = "cont_1" class = "plot-type">
+			<button class = "button" onclick="addCoord()">Add Point</button> 
+			<div id = "orderedPair1" class = "coords">
+				(<input class = "coord" type="text" size = "5"> , 
+				<input class = "coord" type="text" size = "5">)
+				<div class = "deleteX" onclick="deleteCoord(this)">&#10006</div>
+			</div>
+		</div>
+
+		<div id = "cont_2" class = "plot-type" style="display: none; padding-left:2px">
+			<input type="file" id="file">
+			<p style="margin-bottom: 0px">File Type: .txt <br>File Format: X,Y</p>
+			<div style="width: 120px; height: 70px; background-color:white; left: 2px">
+				23,45<br>322,234<br>-103,-45<br>145,-256
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>	

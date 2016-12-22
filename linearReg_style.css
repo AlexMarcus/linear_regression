@@ -1,0 +1,60 @@
+body{
+	background-color: black;
+}
+
+#regCanvas{
+	background-color: #D1D0CE;
+	position: absolute;
+	top: 40px;
+	left: 25px;
+}
+
+.container{
+	border-radius: 7px;
+	background-color: #3BB9FF;
+	position: relative;
+	margin: 30px;
+	height: 720px;
+	padding: 10px;
+}
+
+.coord{
+	margin: 5px;
+}
+
+.button{
+	margin: 2px 2px;
+}
+
+.eqn{
+	margin: 15px;
+}
+
+#b{
+	margin-right: 50px;
+}
+
+.deleteX{
+	display: inline; 
+	color: #565051; 
+	margin: 0 0 0 5px;
+	cursor: pointer;
+}
+
+#plot-container{
+	position: absolute; 
+	left: 700px; 
+	top: 40px;
+}
+
+.plot-type{
+	position: absolute; 
+	left: 700px; 
+	top: 65px;
+}
+
+@media (max-width: 1000px){
+	.container{
+		width: 925px;
+	}
+}
